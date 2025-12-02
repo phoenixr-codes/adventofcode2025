@@ -3,7 +3,8 @@
 ## Usage
 
 Put the example input `example.txt` and your personal input `input.txt`, into
-the `input` directories of each day.
+the `input` directories of each day. This project uses Zig version
+`0.16.0-dev.393+dd4be26f5`.
 
 ```sh
 zig run-day01 -- 1 # part 1
