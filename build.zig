@@ -8,7 +8,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
     });
 
-    const days = [_][]const u8{"day01", "day02", "day03", "day04"};
+    const days = [_][]const u8{"day01", "day02", "day03", "day04", "day05"};
     inline for (days) |day| {
         const exe = b.addExecutable(.{
             .name = "adventofcode2025-" ++ day,
