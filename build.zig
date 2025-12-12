@@ -2,13 +2,21 @@ const std = @import("std");
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
-    const optimize = b.standardOptimizeOption(.{.preferred_optimize_mode = .Debug});
+    const optimize = b.standardOptimizeOption(.{ .preferred_optimize_mode = .Debug });
     const mod = b.addModule("adventofcode2025", .{
         .root_source_file = b.path("src/root.zig"),
         .target = target,
     });
 
-    const days = [_][]const u8{"day01", "day02", "day03", "day04", "day05", "day06"};
+    const days = [_][]const u8{
+        "day01",
+        "day02",
+        "day03",
+        "day04",
+        "day05",
+        "day06",
+        "day07",
+    };
     inline for (days) |day| {
         const exe = b.addExecutable(.{
             .name = "adventofcode2025-" ++ day,
